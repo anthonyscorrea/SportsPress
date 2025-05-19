@@ -156,6 +156,7 @@ foreach ( $events as $event ) :
 	$output .=
 	"BEGIN:VEVENT\r\n" .
 	'SUMMARY:' . preg_replace( '/([\,;])/', '\\\$1', $summary ) . "\r\n" .
+	'URL:' . esc_url(get_permalink($event->ID)) . "\r\n" .
 	"UID:$event->ID\r\n" .
 	"STATUS:CONFIRMED\r\n" .
 	"DTSTAMP:19700101T000000\r\n" .
