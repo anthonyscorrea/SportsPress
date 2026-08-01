@@ -162,7 +162,7 @@ foreach ( $events as $event ) :
 	'DTSTART:' . mysql2date( $date_format, $event->post_date ) . "\r\n" .
 	'DTEND:' . $end->format( $date_format ) . "\r\n" .
 	'LAST-MODIFIED:' . mysql2date( $date_format, $event->post_modified_gmt ) . "\r\n".
-	'URL:' . esc_url(get_permalink($event->ID)) . "\r\n";
+	'URL:' . esc_url( get_permalink( $event->ID ) ) . "\r\n";
 
 	if ( $description ) {
 		$output .= 'DESCRIPTION:' . $description . "\r\n";
